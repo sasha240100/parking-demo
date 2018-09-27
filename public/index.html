@@ -9,6 +9,7 @@
         margin: 0;
         padding: 0;
         background: black;
+        overflow: hidden;
       }
 
       #loading {
@@ -57,9 +58,27 @@
       canvas.finished {
         opacity: 0.5;
       }
+
+      #badge {
+        position: fixed;
+        right: 60px;
+        top: 60px;
+        width: 120px;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      canvas.loaded ~ #badge {
+        opacity: 0.8;
+      }
+
+      canvas.finished ~ #badge {
+        opacity: 0;
+      }
     </style>
   </head>
   <body>
+    <img id="badge" src="./assets/images/badge.png"></img>
     <div id="loading">Loading...</div>
     <div id="success">Success!</div>
     <div id="fail">Fail;( <br> <span style="font-size: 20pt">Reload page to try again.</span></div>

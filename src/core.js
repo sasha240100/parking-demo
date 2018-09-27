@@ -15,7 +15,7 @@ renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
 const composer = new EffectComposer(renderer);
 
-document.body.appendChild(renderer.domElement);
+document.body.prepend(renderer.domElement);
 
 const scene = new THREE.Scene();
 
