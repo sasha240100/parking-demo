@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <style media="screen">
+      body {
+        margin: 0;
+        padding: 0;
+        background: black;
+      }
+
+      #loading {
+        color: cyan;
+        position: fixed;
+        left: 50%;
+        top: 40%;
+        font-size: 40pt;
+        font-family: 'Montserrat', sans-serif;
+        transform: translateX(-50%);
+        /* display: none; */
+      }
+
+      #success {
+        color: lightgreen;
+        position: fixed;
+        left: 50%;
+        top: 40%;
+        font-size: 40pt;
+        font-family: 'Montserrat', sans-serif;
+        transform: translateX(-50%);
+        display: none;
+      }
+
+      #fail {
+        color: red;
+        position: fixed;
+        left: 50%;
+        top: 40%;
+        font-size: 40pt;
+        font-family: 'Montserrat', sans-serif;
+        transform: translateX(-50%);
+        display: none;
+        text-align: center;
+      }
+
+      canvas {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      canvas.loaded {
+        opacity: 1;
+      }
+
+      canvas.finished {
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading">Loading...</div>
+    <div id="success">Success!</div>
+    <div id="fail">Fail;( <br> <span style="font-size: 20pt">Reload page to try again.</span></div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/2410ad1a/examples/js/libs/inflate.min.js" charset="utf-8"></script>
+    <script src="./bundle/index.bundle.js" charset="utf-8"></script>
+  </body>
+</html>
