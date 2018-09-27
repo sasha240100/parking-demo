@@ -64,7 +64,7 @@ function blurScreen() {
   });
 
   const garage = await new Garage(scene).load;
-  garage.mesh.position.set(3, -0.6, 0);
+  garage.mesh.position.set(3, -2.4, 0);
 
   document.querySelector('canvas').classList.add('loaded');
   $('#loading').fadeOut(1000);
@@ -84,7 +84,7 @@ function blurScreen() {
   const light = new THREE.SpotLight(0xffffff, 1, 8);
 
   light.castShadow = true;
-  light.position.set(6, 4.7, 0);
+  light.position.set(6, 3.7, 0);
   light.target.position.set(6, 0, 0);
 
   light.shadow.mapSize.width = 1024;

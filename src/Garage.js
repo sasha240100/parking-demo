@@ -5,7 +5,7 @@ const loader = new FBXLoader();
 export default class Garage {
   constructor(scene) {
     this.load = new Promise(resolve => {
-      loader.load('./assets/models/sibir_garaz4.fbx', data => {
+      loader.load('./assets/models/sibir_garaz3.fbx', data => {
         data.traverse(obj => {
           obj.receiveShadow = true;
           // if (obj.material)
@@ -13,7 +13,7 @@ export default class Garage {
         })
 
         this.mesh = data;
-        // this.mesh.rotation.x = Math.PI / 2;
+        this.mesh.rotation.x = Math.PI / 2;
         scene.add(this.mesh);
         resolve(this);
       })
